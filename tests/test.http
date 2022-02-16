@@ -1,0 +1,49 @@
+### Register customer
+POST http://localhost:9999/api/v1/register
+Content-Type: application/json
+
+{
+    "username" : "brosskev",
+    "password" : "12345678"
+}
+###
+
+### Login customer
+POST http://localhost:9999/api/v1/login
+Content-Type: application/json
+
+{
+    "username" : "brosskev",
+    "password" : "12345678"
+}
+###
+
+### Create Course customer
+POST http://localhost:9999/api/v1/course/create
+Content-Type: application/json
+Authorization: defaultAdminsToken
+
+{
+    "name" : "Test Course"
+}
+###
+
+### Subscribe customer
+POST http://localhost:9999/api/v1/subscribe
+Content-Type: application/json
+Authorization: 4a25c564fd89102050be6ca552e7863fa6d1967c804ae334c3e1f579627f6a09e849b3d435ab476f05c42f2f1fe8aa78d0f0515271a0f60ae624dadc4ec6e41ced1afbb78837b1b610c37e242d1f911356595adbde02c9fa65c5e63310a266b1dc0f0c93794828f35e6784499fa243fc32a94ea45a9e985d1112ca4423e26d3a1de8e07c3ae8724f2bda8b6d78e8fa93c3cf5f0756c8f8d711f2d0807b353e5b214e3b8e002f31280ef919354399f158506ba9d3ea7902163e422e10bbc3ccbcc3edb7cdb15444b978960bdb64acd3c784231dee83d553eaeed77b007fcb4a978ba1b2e5aeaf20b60554e67769df4ed2c85deb9576b6b851b002312b98fd4198
+
+{
+    "course_id" : 1
+}
+###
+
+### Get customer courses
+GET http://localhost:9999/api/v1/course/user/2
+Authorization: 4a25c564fd89102050be6ca552e7863fa6d1967c804ae334c3e1f579627f6a09e849b3d435ab476f05c42f2f1fe8aa78d0f0515271a0f60ae624dadc4ec6e41ced1afbb78837b1b610c37e242d1f911356595adbde02c9fa65c5e63310a266b1dc0f0c93794828f35e6784499fa243fc32a94ea45a9e985d1112ca4423e26d3a1de8e07c3ae8724f2bda8b6d78e8fa93c3cf5f0756c8f8d711f2d0807b353e5b214e3b8e002f31280ef919354399f158506ba9d3ea7902163e422e10bbc3ccbcc3edb7cdb15444b978960bdb64acd3c784231dee83d553eaeed77b007fcb4a978ba1b2e5aeaf20b60554e67769df4ed2c85deb9576b6b851b002312b98fd4198
+###
+
+### Get course customers
+GET http://localhost:9999/api/v1/course/subscribers/1
+Authorization: defaultAdminsToken
+###
